@@ -20,6 +20,12 @@ Esse aplicativo é feito em React Native e deve consumir uma API REST que indica
 - Utilize comentários pois alguém irá ler o seu código. Nosso último dev esqueceu um comentário importante. RIP :(
 - Utilize o README.md do seu projeto para explicar instalação, funcionamento, o processo que usou para o desenvolvimento ou implorar por misericórdia.
 
+# Funcionalidades
+- Mapa
+- Listagem
+- Busca/filtro
+- Estou com sede (indicar posto mais próximo)
+
 ## Importante
 - Use Expo
 - Use Expo
@@ -32,7 +38,6 @@ Pode contar pontos extras
 - Autenticação
 - Firebase/Amplify
 - Teste automatizado
-- Mapa e Georeferenciamento
 
 ### Exemplo de entidades retornadas pela API:
 
