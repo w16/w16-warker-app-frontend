@@ -14,7 +14,7 @@ Esse aplicativo é feito em React Native e deve consumir uma API REST que indica
 - Não há regras, não há lei, apenas a sobrevivência importa! 
 
 ## Recomendações
-- Faça bom uso dos recursos de bibliotecas visuais (Material Elements, Material Bread, )
+- Faça bom uso dos recursos Material Bread, React Navigation, Formik, Yup, Context API
 - D.R.Y. = "Don't Repeat Yourself"
 - Mantenha o código limpo e organizado
 - Utilize comentários pois alguém irá ler o seu código. Nosso último dev esqueceu um comentário importante. RIP :(
@@ -38,6 +38,7 @@ Pode contar pontos extras
 - Autenticação
 - Firebase/Amplify
 - Teste automatizado
+- Typescript
 
 ### Exemplo de entidades retornadas pela API:
 
