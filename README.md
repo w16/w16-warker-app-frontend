@@ -1,93 +1,40 @@
 # W16 Warker App - Frontend
 
-## Desenvolvedor
+## Instalando
+Projeto criado em EXPO
+```
+yarn install
+```
 
-Olá! Muito obrigado por participar da avalição técnica para integrar a equipe de desenvolvimento da W16.
+```
+yarn start
+```
 
-Criamos esta avaliação para avaliar seu conhecimento em lógica de programação, capacidade de investigar e conhecer novas ferramentas, organização e qualidade de código e especialmente, sua criatividade.
+## Layout
+Pensando na ideia de um app para encotrar combustível após um Apocalipse, toda a parte visual foi inspirado no filme do Mad Max com uma refêrencia ao Waze.
 
-## Especificação
-No mundo pós-apocaliptico de 2021, o combustível tem um valor inestimável. Gangues bárbaras lutam até a morte pelo controle desse valioso recurso e a W16 está desenvolvendo o aplicativo WARKER, que é a última esperança da humanidade em trazer um pouco de paz e ordem à esse mundo devastado.
-Esse aplicativo é feito em React Native e deve consumir uma API REST que indica os postos de gasolina das diversas cidades, sua localização e o nível dos seus reservatórios. Lembre-se de que não há mais lei e a sua vida depende do sucesso desse app. Marcopoc não fica feliz quando o seu app falha devido a erros do frontend (ou do backend) e você não quer deixar o Marcopoc irritado...
 
-## Regras
-- Não há regras, não há lei, apenas a sobrevivência importa! 
+## Funcionalidades desenvolvidas
+- Mapa para visualizar todas os postos com seus devidos reservatórios.
+- Listagem de todos os postos informando a distancia de um determinado ponto
+- Detalhe de um determinado posto ao clicar em um dos postos da listagem
+- Navegação com Stack e Tabs
+- Requisição via Axios
 
-## Recomendações
-- Faça bom uso dos recursos Material Bread, React Navigation, Formik, Yup, Context API
-- D.R.Y. = "Don't Repeat Yourself"
-- Mantenha o código limpo e organizado
-- Utilize comentários pois alguém irá ler o seu código. Nosso último dev esqueceu um comentário importante. RIP :(
-- Utilize o README.md do seu projeto para explicar instalação, funcionamento, o processo que usou para o desenvolvimento ou implorar por misericórdia.
-
-# Funcionalidades
-- Mapa
-- Listagem
+## Funcionalidades ainda não desenvolvidos
 - Busca/filtro
 - Estou com sede (indicar posto mais próximo)
 
-## Importante
-- Use Expo
-- Use Expo
-- Use Expo
-- Já mencionei que precisa buildar com Expo?
-- O app precisa ser bonito :)
+## Bibliotecas usadas
+- Expo
+- Material Bread
+- React Navigation
+- Axios
 
-## Pontos Extras
-Pode contar pontos extras
-- Autenticação
-- Firebase/Amplify
-- Teste automatizado
-- Typescript
+## Bibliotecas ainda não utilizadas
+- Formik (irei utilizar no filtro)
+- Yup (irei utilizar no filtro)
+- Context API (irei utilizar no Login ao clicar no botão para passar os parâmetros e salvar pelo assync storage)
 
-### Exemplo de entidades retornadas pela API:
 
-Cidades
-```
-|id |nome_da_cidade|created_at|updated_at|
-|int|string        |timestamp |timestamp |
-```
 
-Postos
-```
-|id |cidade_id|reservatorio|latitude|longitude|created_at|updated_at|
-|int|int(fk)  |int(1-100%) |double  |double   |timestamp |timestamp |
-```
-
-### Endpoints
-/api/cidade/id
-```
-{
-    id : id,
-    cidade : nome_da_cidade,
-    postos : {
-        id : id,
-        reservatorio : reservatorio,
-        coords : {
-            latitude : latitude,
-            longitude : longitude
-        },
-        updated_at : updated_at
-    }
-}
-```
-
-/api/posto/id
-```
-{
-    id : id,
-    reservatorio : reservatorio,
-    coords : {
-        latitude : latitude,
-        longitude : longitude
-    },
-    updated_at : updated_at
-}
-```
-
-## Entrega
-Crie um FORK deste repositório e faça um Pull-Request. Commite no repositório todo o código do backend, juntamente com instruções, se necessário. O prazo para entrega será de 7 horas - ou melhor, 7 dias.
-
-Qualquer dúvida, crie um issue neste projeto ou entre em contato com o nosso time pelo instagram: @w16.softwarehouse
-
-2 DEVS ENTRAM, 1 DEV SAI!
