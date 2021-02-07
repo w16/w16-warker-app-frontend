@@ -68,7 +68,7 @@ export default function Busca({navigation}){
                                 <Button
                                     color="orange"
                                     onPress={handleSubmit}
-                                    title="Fazer Login"
+                                    title="Realizar Filtro"
                                 />
                             </View>
                         )}
@@ -86,7 +86,7 @@ const FilterValidationScheme = yup.object().shape({
         .number()
         .min(1, "Valor mínimo deve ser maior que 0")
         .max(100, "Valor máximo é até 100")
-        .required("Campo obrigarótio")
+        .required("Campo obrigatório")
 
 })
 // Estilizando os componentes
