@@ -35,6 +35,6 @@ export default function Detalhe({route }){
                     description={`Reservatótio: ${data.reservatorio}`}
                 />
             </MapView>
-    </View>
+      </View>
     )
 }
