@@ -8,7 +8,7 @@ Criamos esta avaliação para avaliar seu conhecimento em lógica de programaç�
 
 ## Especificação
 No mundo pós-apocaliptico de 2021, o combustível tem um valor inestimável. Gangues bárbaras lutam até a morte pelo controle desse valioso recurso e a W16 está desenvolvendo o aplicativo WARKER, que é a última esperança da humanidade em trazer um pouco de paz e ordem à esse mundo devastado.
-Esse aplicativo é feito em React Native e deve consumir uma API REST que indica os postos de gasolina das diversas cidades, sua localização e o nível dos seus reservatórios. Lembre-se de que não há mais lei e a sua vida depende do sucesso desse app. Marcopoc não fica feliz quando o seu app falha devido a erros do frontend (ou do backend) e você não quer deixar o Marcopoc irritado...
+Esse aplicativo deve consumir uma API REST que indica os postos de gasolina das diversas cidades, sua localização e o nível dos seus reservatórios. Lembre-se de que não há mais lei e a sua vida depende do sucesso desse app. Marcopoc não fica feliz quando o seu app falha devido a erros do frontend (ou do backend) e você não quer deixar o Marcopoc irritado...
 
 ## Regras
 - Não há regras, não há lei, apenas a sobrevivência importa! 
@@ -31,7 +31,7 @@ Esse aplicativo é feito em React Native e deve consumir uma API REST que indica
 - Use Expo
 - Use Expo
 - Já mencionei que precisa buildar com Expo?
-- O app precisa ser bonito :)
+- O app precisa seguir este layout ==> [Layout](https://www.figma.com/file/22YXdBw0fOcOcWeK4DZTs1/W16-Warker-App-Frontend?node-id=0%3A1)
 
 ## Pontos Extras
 Pode contar pontos extras
@@ -55,6 +55,21 @@ Postos
 ```
 
 ### Endpoints
+- Forneceremos os endpoints no seguinte link ==> [Backend](https://warker-api.herokuapp.com)
+- Você pode verificar a lista de Endpoints nesta [Collection](https://www.getpostman.com/collections/49738c9f93ceaa92aded) pelo Postman.
+
+Credenciais de Acesso:
+    Login: marco@w16.com.br
+    Senha: w16front
+    
+/api/login
+```
+{
+    email:email,
+    password:password
+}
+```
+
 /api/cidade/id
 ```
 {
