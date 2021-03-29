@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { userData } from '../../interfaces';
 
 /**
  * @file Serviço de consultas à API.
@@ -6,10 +7,6 @@ import axios from 'axios';
  * 
  * Não foram feitos tratamentos específicos para cada status de erro retornado pelo servidor, sendo o mesmo exposto apenas no console, com mensagem padrão para o usuário.
  */
-
-interface userData {
-    [key: string]: string;
-}
 
 const baseUrl = 'https://warker-api.herokuapp.com/api';
 

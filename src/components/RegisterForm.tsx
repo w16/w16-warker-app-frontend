@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import * as Yup from 'yup';
-import { t } from 'i18n-js';
+import { t } from '../i18n';
 import { UserContext } from '../contexts/UserContext';
 import { FormWithTextInputs } from './FormComponents';
 
@@ -12,9 +12,10 @@ import { FormWithTextInputs } from './FormComponents';
  */
 
 const validationSchema = Yup.object().shape({
-    name: Yup.string().required(t('nameRequired')),
+    name: Yup.string().required(t('nameRequired')).max(15),
     email: Yup.string().email(t('emailInvalid')).required(t('emailRequired')),
-    password: Yup.string().required(t('passwordRequired'))
+    password: Yup.string().required(t('passwordRequired')),
+    car: Yup.string().max(8),
 });
  
  export default function RegisterForm() {

@@ -1,24 +1,25 @@
 import React, { createContext, ReactNode, useState } from "react";
 import { register, login } from '../services/ApiService';
-import { t } from "i18n-js";
+import { t } from "../i18n";
+import { userData, handlerFunction } from '../../interfaces';
 
 /**
- * Contexto para tratamento de dados do usuário.
+ * @file Realiza tratamento de dados do usuário.
+ * @author Lucas Creator
+ * 
  * Expõe as seguintes funções, que encaminham requisições diretamente à API {@link https://warker-api.herokuapp.com/ Warker}:
  * @func handleRegister -- função de registro de usuário, que invoca em sequência a função de login, se não houver erros no registro.
  * @func handleLogin -- realiza login do usuário, recuperando do servidor o nome fornecido e o token de acesso.
  * @const token -- token de acesso fornecido pela API para consultas ao banco.
  */
 
-/** interface para objeto de número variável de parâmetros associados aos dados de usuário */
-interface userData {
-    [key: string]: string;
-}
 
 interface UserContextData {
-    handleRegister: (data: userData) => Promise<boolean>;
-    handleLogin: (data: userData) => Promise<boolean>;
+    handleRegister: handlerFunction;
+    handleLogin: handlerFunction;
     token: string;
+    userName: string;
+    carName: string;
 };
 
 interface UserProviderProps {
@@ -34,12 +35,13 @@ export function UserProvider({children}: UserProviderProps){
     const [carName, setCarName] = useState('');
         // Apenas um pequeno mimo ao usuário.
 
-    /* Pequeno hack para utilizar a API para armazenar nome do usuário e nome do veículo numa só variável.*/
+    /* Abaixo, pequeno hack para utilizar a API para armazenar nome do usuário e nome do veículo numa só variável.*/
+
     /** @func setNames -- atribui às @const userName e @const carName os valores armazenados na API no momento de registro. */
     function setNames(user:string):void {
         let userData = user.split('|');
         setUserName(userData[0]);
-        let car = userData[1] ? userData[1] : t('carName');
+        let car = userData[1] ? userData[1] : t('myCar');
         setCarName(car);
     }
 
@@ -81,7 +83,9 @@ export function UserProvider({children}: UserProviderProps){
         <UserContext.Provider value={{
             handleLogin,
             handleRegister,
-            token
+            token,
+            userName,
+            carName
         }}>
             {children}
         </UserContext.Provider>

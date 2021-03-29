@@ -1,0 +1,304 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "cidade": "Fortaleza",
+      "coords": {
+        "longitude": "-38.15618881833694",
+        "latitude": "-3.5417106665945703"
+      },
+      "postos": [
+        {
+          "id": 1,
+          "reservatorio": 28,
+          "coords": {
+            "latitude": "-38.569450887622466",
+            "longitude": "-3.771743500207963"
+          },
+          "updated_at": "2021-03-04T14:28:16.000000Z",
+          "created_at": "2021-03-04T14:28:16.000000Z"
+        },
+        {
+          "id": 2,
+          "reservatorio": 56,
+          "coords": {
+            "latitude": "-38.57694535598716",
+            "longitude": "-3.7652364063819896"
+          },
+          "updated_at": "2021-03-04T14:28:16.000000Z",
+          "created_at": "2021-03-04T14:28:16.000000Z"
+        },
+        {
+          "id": 3,
+          "reservatorio": 54,
+          "coords": {
+            "latitude": "-38.553476944801716",
+            "longitude": "-3.7524329949979522"
+          },
+          "updated_at": "2021-03-04T14:28:16.000000Z",
+          "created_at": "2021-03-04T14:28:16.000000Z"
+        },
+        {
+          "id": 4,
+          "reservatorio": 43,
+          "coords": {
+            "latitude": "-38.555429592879335",
+            "longitude": "-3.746908766791986"
+          },
+          "updated_at": "2021-03-04T14:28:16.000000Z",
+          "created_at": "2021-03-04T14:28:16.000000Z"
+        },
+        {
+          "id": 5,
+          "reservatorio": 92,
+          "coords": {
+            "latitude": "-38.54212973100341",
+            "longitude": "-3.7556088251773376"
+          },
+          "updated_at": "2021-03-04T14:28:16.000000Z",
+          "created_at": "2021-03-04T14:28:16.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "cidade": "Florianopolis",
+      "coords": {
+        "longitude": "-48.44147344104905",
+        "latitude": "-27.647926875493706"
+      },
+      "postos": [
+        {
+          "id": 6,
+          "reservatorio": 88,
+          "coords": {
+            "latitude": "-48.52116104548629",
+            "longitude": "-27.592857348592787"
+          },
+          "updated_at": "2021-03-04T14:28:16.000000Z",
+          "created_at": "2021-03-04T14:28:16.000000Z"
+        },
+        {
+          "id": 7,
+          "reservatorio": 85,
+          "coords": {
+            "latitude": "-48.514122929338384",
+            "longitude": "-27.59118383061328"
+          },
+          "updated_at": "2021-03-04T14:28:17.000000Z",
+          "created_at": "2021-03-04T14:28:17.000000Z"
+        },
+        {
+          "id": 8,
+          "reservatorio": 57,
+          "coords": {
+            "latitude": "-48.51789947911621",
+            "longitude": "-27.606130484049547"
+          },
+          "updated_at": "2021-03-04T14:28:17.000000Z",
+          "created_at": "2021-03-04T14:28:17.000000Z"
+        },
+        {
+          "id": 9,
+          "reservatorio": 30,
+          "coords": {
+            "latitude": "-48.52472301855228",
+            "longitude": "-27.6103136605569"
+          },
+          "updated_at": "2021-03-04T14:28:17.000000Z",
+          "created_at": "2021-03-04T14:28:17.000000Z"
+        },
+        {
+          "id": 10,
+          "reservatorio": 32,
+          "coords": {
+            "latitude": "-48.499875035322795",
+            "longitude": "-27.6003118002517"
+          },
+          "updated_at": "2021-03-04T14:28:17.000000Z",
+          "created_at": "2021-03-04T14:28:17.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "cidade": "Rio de Janeiro",
+      "coords": {
+        "longitude": "-43.1338118307636",
+        "latitude": "-22.956579152468546"
+      },
+      "postos": [
+        {
+          "id": 11,
+          "reservatorio": 38,
+          "coords": {
+            "latitude": "-43.202338175785094",
+            "longitude": "-22.9103639939133"
+          },
+          "updated_at": "2021-03-04T14:28:17.000000Z",
+          "created_at": "2021-03-04T14:28:17.000000Z"
+        },
+        {
+          "id": 12,
+          "reservatorio": 99,
+          "coords": {
+            "latitude": "-43.21916098999228",
+            "longitude": "-22.915423735220624"
+          },
+          "updated_at": "2021-03-04T14:28:17.000000Z",
+          "created_at": "2021-03-04T14:28:17.000000Z"
+        },
+        {
+          "id": 13,
+          "reservatorio": 95,
+          "coords": {
+            "latitude": "-43.217959360406056",
+            "longitude": "-22.909573392274275"
+          },
+          "updated_at": "2021-03-04T14:28:17.000000Z",
+          "created_at": "2021-03-04T14:28:17.000000Z"
+        },
+        {
+          "id": 14,
+          "reservatorio": 70,
+          "coords": {
+            "latitude": "-43.23941703158869",
+            "longitude": "-22.893918530607433"
+          },
+          "updated_at": "2021-03-04T14:28:17.000000Z",
+          "created_at": "2021-03-04T14:28:17.000000Z"
+        },
+        {
+          "id": 15,
+          "reservatorio": 51,
+          "coords": {
+            "latitude": "-43.2062863872827",
+            "longitude": "-22.897555679800604"
+          },
+          "updated_at": "2021-03-04T14:28:17.000000Z",
+          "created_at": "2021-03-04T14:28:17.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "cidade": "Salvador",
+      "coords": {
+        "longitude": "-38.56116132250316",
+        "latitude": "-12.881075112897415"
+      },
+      "postos": [
+        {
+          "id": 16,
+          "reservatorio": 19,
+          "coords": {
+            "latitude": "-38.47123132665181",
+            "longitude": "-12.991688546454805"
+          },
+          "updated_at": "2021-03-04T14:28:17.000000Z",
+          "created_at": "2021-03-04T14:28:17.000000Z"
+        },
+        {
+          "id": 17,
+          "reservatorio": 53,
+          "coords": {
+            "latitude": "-38.49457727289851",
+            "longitude": "-12.990183136159677"
+          },
+          "updated_at": "2021-03-04T14:28:17.000000Z",
+          "created_at": "2021-03-04T14:28:17.000000Z"
+        },
+        {
+          "id": 18,
+          "reservatorio": 72,
+          "coords": {
+            "latitude": "-38.482217654297315",
+            "longitude": "-13.000386293892278"
+          },
+          "updated_at": "2021-03-04T14:28:17.000000Z",
+          "created_at": "2021-03-04T14:28:17.000000Z"
+        },
+        {
+          "id": 19,
+          "reservatorio": 81,
+          "coords": {
+            "latitude": "-38.452176914641626",
+            "longitude": "-13.001724381831764"
+          },
+          "updated_at": "2021-03-04T14:28:17.000000Z",
+          "created_at": "2021-03-04T14:28:17.000000Z"
+        },
+        {
+          "id": 20,
+          "reservatorio": 26,
+          "coords": {
+            "latitude": "-38.444623814385345",
+            "longitude": "-12.995201134986594"
+          },
+          "updated_at": "2021-03-04T14:28:17.000000Z",
+          "created_at": "2021-03-04T14:28:17.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "cidade": "Parnaiba",
+      "coords": {
+        "longitude": "-41.78834221683234",
+        "latitude": "-2.881284266681368"
+      },
+      "postos": [
+        {
+          "id": 21,
+          "reservatorio": 97,
+          "coords": {
+            "latitude": "-41.76050037810781",
+            "longitude": "-2.919229405834962"
+          },
+          "updated_at": "2021-03-04T14:28:17.000000Z",
+          "created_at": "2021-03-04T14:28:17.000000Z"
+        },
+        {
+          "id": 22,
+          "reservatorio": 1,
+          "coords": {
+            "latitude": "-41.77251667397009",
+            "longitude": "-2.9271155542989153"
+          },
+          "updated_at": "2021-03-04T14:28:17.000000Z",
+          "created_at": "2021-03-04T14:28:17.000000Z"
+        },
+        {
+          "id": 23,
+          "reservatorio": 23,
+          "coords": {
+            "latitude": "-41.772859996709",
+            "longitude": "-2.902256855276471"
+          },
+          "updated_at": "2021-03-04T14:28:17.000000Z",
+          "created_at": "2021-03-04T14:28:17.000000Z"
+        },
+        {
+          "id": 24,
+          "reservatorio": 64,
+          "coords": {
+            "latitude": "-41.748655743615",
+            "longitude": "-2.9027711787428863"
+          },
+          "updated_at": "2021-03-04T14:28:17.000000Z",
+          "created_at": "2021-03-04T14:28:17.000000Z"
+        },
+        {
+          "id": 25,
+          "reservatorio": 27,
+          "coords": {
+            "latitude": "-41.72874302475752",
+            "longitude": "-2.9091144822338486"
+          },
+          "updated_at": "2021-03-04T14:28:17.000000Z",
+          "created_at": "2021-03-04T14:28:17.000000Z"
+        }
+      ]
+    }
+  ]
+}

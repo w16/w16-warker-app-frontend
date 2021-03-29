@@ -1,9 +1,12 @@
 import React, { createContext, ReactNode, useEffect, useState } from "react";
 import * as Permissions from 'expo-permissions';
-import haversine from "haversine";
+import haversine, { Coordinate, CoordinateLongitudeLatitude } from "haversine";
 
 /**
- * Contexto de geolocalização. Expõe as seguintes propriedades:
+ * @file Gere dados e funções de geolocalização.
+ * @author Lucas Creator
+ * 
+ * Expõe as seguintes propriedades:
  * @const location -- coordenadas de localização do usuário ou do ponto inicial, caso não haja autorização para geolocalização.
  * @func calculateDistance -- calcula distância de um dado ponto em relação à localização coom descrito acima com base na fórmula de haversine {@link https://en.wikipedia.org/wiki/Haversine_formula|Link} (distâncias entre dois pontos de uma esfera a partir de suas latitudes e longitudes).
  */
@@ -19,7 +22,7 @@ interface Coordinates {
 
 interface GeolocationContextData {
     location: Coordinates;
-    calculateDistance: (targetLocation: Coordinates) => number;
+    calculateDistance: (targetLocation: CoordinateLongitudeLatitude) => number;
 };
 
 interface GeolocationProviderProps {
@@ -35,8 +38,8 @@ export function GeolocationProvider({children}: GeolocationProviderProps){
         longitude: LONGITUDE
     });
 
-    function calculateDistance(targetLocation: Coordinates):number {
-        return haversine(location, targetLocation) || 0;
+    function calculateDistance(targetLocation: CoordinateLongitudeLatitude):number {
+        return haversine(location, targetLocation) || 0; //, {unit: 'meter'}
       };
     
     /** Solicita uma única vez, no primeiro acesso ao mapa
@@ -64,7 +67,6 @@ export function GeolocationProvider({children}: GeolocationProviderProps){
                     };               
                     
                     setLocation(newCoordinate);
-                
                 },
                 error => console.log(error),
                 {

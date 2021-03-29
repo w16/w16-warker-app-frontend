@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import * as Yup from 'yup';
-import { t } from 'i18n-js';
+import { t } from '../i18n';
 import { UserContext } from '../contexts/UserContext';
 import { FormWithTextInputs } from './FormComponents';
 
