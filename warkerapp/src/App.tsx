@@ -13,7 +13,7 @@ type UserFormat = {
 
 type AuthContextType = {
   user: UserFormat | undefined;
-  SignInWithGoogle: () => Promise<void>;
+  SignInWithGoogle: () => Promise<void>; //promise cuz it's async await and dont have return
 };
 
 //as any ignore typescript for this context

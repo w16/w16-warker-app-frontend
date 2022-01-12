@@ -54,38 +54,8 @@
             align-self: center;
         }
 
-        h2{
-            font-size: 24px;
-            margin: 64px 0 24px;
-            font-family: 'Poppins', sans-serif;
-            color: #080808ce;
-        }
-
-        form {
-            input {
-                height: 50px;
-                border-radius: 8px;
-                padding: 0 16px;
-                background-color: #FFF;
-                border: 1px solid #a8a8b3;
-            }
-
-            button {
-                margin-top: 16px;
-            }
-
-            button, input {
-                width: 100%;
-            }
-        }
-
-        p{
-            font-size: 14px;
-            color: #737380;
-            margin-top: 16px;
-        a{
-            color: #e659f8;
-        }            
+        h2, h3 {
+            color: rgba(0, 0, 0, 0.74);
         }
     }
 
@@ -118,8 +88,6 @@
 
 
 
-
-
     .separator {
         font-size: 14px;
         color: #a8a8b3;
@@ -144,6 +112,45 @@
             background-color: #a8a8b3;
             margin-left: 16px;
 
+        }
+    }
+}
+
+.main-content-login {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 435px;
+    align-items: stretch;
+    text-align: center;
+
+    > img {
+        align-self: center;
+    }
+
+    h2 {
+        color: rgba(0, 0, 0, 0.74);
+    }
+
+    .header {
+        display: flex;
+        flex-direction: row;
+        width: 420px;
+        align-items:center;
+        justify-content: space-between;
+
+        h3{
+            color: rgba(0, 0, 0, 0.74);
+            font-size: 24px;
+            cursor: pointer;
+        }
+    }
+    
+    .search-map {
+        > input {
+            padding: 08px;
+            width: 80%;
+            margin-top: 45px;
         }
     }
 }

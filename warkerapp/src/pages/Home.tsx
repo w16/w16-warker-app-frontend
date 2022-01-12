@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { AuthContext } from "../App";
 import illustrationImg from "../assets/images/illustration.svg";
+import SearchAppBar from "../components/Search";
 import "../styles/auth.scss";
 
 export function Home() {
@@ -15,8 +16,16 @@ export function Home() {
         <p>Welcome, {user?.name}</p>
       </aside>
       <main>
-        <div className="main-content">
-          <h1>APP</h1>
+        <div className="main-content-login">
+          <header>
+              <div className="header">
+                <h2>Explorar</h2>
+                <h3 onClick={(e)=>{console.log("estou sendo clicado")}}>Filtrar</h3>
+              </div>
+          </header>
+          <div className="search-map">
+          <SearchAppBar></SearchAppBar>
+          </div>
         </div>
       </main>
     </div>
