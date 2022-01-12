@@ -1,4 +1,6 @@
 import { useNavigate } from "react-router-dom"
+import {firebase, auth} from '../services/firebase';
+
 import illustrationImg from "../assets/images/illustration.svg"
 import logoImg from "../assets/images/gas.svg"
 import googleIconImg from "../assets/images/google-icon.svg"
@@ -9,11 +11,15 @@ export function Login() {
 
     const navigate = useNavigate()
 
-    function navigateToNewRoom() {
-        navigate("/home")
+    function handleCreateRoom() {
+        const provider = new firebase.auth.GoogleAuthProvider()
+        auth.signInWithPopup(provider).then(result =>{
+            console.log(result);
+            navigate("/home")
+            
+        })
     }
 
-    
     return(
         <div id="page-auth">
             <aside>
@@ -24,7 +30,7 @@ export function Login() {
             <main>
                 <div className="main-content">
                     <img src={logoImg}></img>
-                    <button onClick={navigateToNewRoom} className="sign-google" >
+                    <button onClick={handleCreateRoom} className="sign-google" >
                         <img src={googleIconImg}></img>
                         Join w/ Google
                     </button>
