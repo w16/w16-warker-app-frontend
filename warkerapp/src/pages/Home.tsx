@@ -1,7 +1,10 @@
+import { useContext } from "react"
+import { AuthContext } from "../App"
 import illustrationImg from "../assets/images/illustration.svg"
 import "../styles/auth.scss"
 
 export function Home() {
+
     return(
 
         <div id="page-auth">
