@@ -181,3 +181,17 @@
         }
     }
 }
+
+.combustivel{
+    
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+
+    li {
+        display: flex;
+        list-style: none;
+    }
+
+
+}
