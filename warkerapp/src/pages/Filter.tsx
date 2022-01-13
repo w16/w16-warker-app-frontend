@@ -125,6 +125,10 @@ export function Filter() {
             <div className="localizacao">
             <h4>Distância da minha localização</h4>
             </div>
+            <div className="range">
+                <span>0km</span>
+                <span>10km</span>
+            </div>
             <SliderSizes></SliderSizes>
           </section>
           <Button

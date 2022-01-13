@@ -8,9 +8,11 @@ export default function SliderSizes() {
     <Box width={435}>
       <Slider
         size="small"
-        defaultValue={70}
+        defaultValue={10}
         aria-label="Small"
         valueLabelDisplay="auto"
+        min= {0}
+        max = {10}
       />
     </Box>
   );
