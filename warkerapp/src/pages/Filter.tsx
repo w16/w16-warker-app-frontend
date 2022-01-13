@@ -4,6 +4,7 @@ import { AuthContext } from "../App";
 import illustrationImg from "../assets/images/illustration.svg";
 import SearchAppBar from "../components/Search";
 import SliderSizes from "../components/Slider"
+import {Button} from "../components/Button"
 import "../styles/auth.scss";
 
 export function Filter() {
@@ -61,6 +62,7 @@ export function Filter() {
             <h4>Distância da minha localização</h4>
             <SliderSizes></SliderSizes>
             </section>
+            <Button onClick={(e)=>{console.log("estou sendo clicado")}}>Ver resultados</Button>
         </div>
       </main>
     </div>
