@@ -37,7 +37,9 @@ export function Filter() {
             </div>
           </header>
           <div className="search-map">
+              <div className="posto">
             <h4>Pesquise por posto</h4>
+            </div>
             <SearchAppBar></SearchAppBar>
           </div>
           <div className="separator-filter"></div>
@@ -81,7 +83,7 @@ export function Filter() {
               </ul>
             </div>
             <div className="separator-filter"></div>
-            <div className="combustivel">
+            <div className="reservatorio">
               <h4>Nível do Reservatório</h4>
               <ul>
                 <li>
@@ -120,8 +122,9 @@ export function Filter() {
               </ul>
             </div>
             <div className="separator-filter"></div>
-
+            <div className="localizacao">
             <h4>Distância da minha localização</h4>
+            </div>
             <SliderSizes></SliderSizes>
           </section>
           <Button

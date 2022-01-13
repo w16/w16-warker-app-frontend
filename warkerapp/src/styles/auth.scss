@@ -182,7 +182,7 @@
     }
 }
 
-.combustivel{
+.combustivel, .reservatorio, .localizacao{
     
    display: flex;
    flex-direction: column;
@@ -190,7 +190,11 @@
 
     li {
         display: flex;
-        list-style: none;
+        margin-bottom: 15px;
+    }
+
+    label {
+        margin-left: 8px;
     }
 
 
