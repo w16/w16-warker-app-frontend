@@ -25,7 +25,7 @@ function App() {
 
   //monitorando se ja existia algum login pre-feito pelo usuario
   useEffect(()=>{
-    auth.onAuthStateChanged(user =>{
+    const unsubscribe = auth.onAuthStateChanged(user =>{
       if(user){
         const { displayName, photoURL, uid } = user;
         if (!displayName || !photoURL) {
@@ -37,6 +37,9 @@ function App() {
           avatar: photoURL,
         });
       }
+      return (
+        unsubscribe()
+      )
     })
   },[])
 
