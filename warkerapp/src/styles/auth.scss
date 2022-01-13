@@ -147,10 +147,37 @@
     }
     
     .search-map {
+
+        margin-top: 40px ;
+
         > input {
             padding: 08px;
             width: 80%;
-            margin-top: 45px;
+            margin-top: 65px;
+        }
+    }
+
+    .separator-filter {
+        font-size: 14px;
+        color: #a8a8b3;
+
+        margin: 28px 0;
+        display: flex;
+        align-items: center;
+
+        //criar os tracos antes e depois do texto
+        &::before{
+            content: '';
+            flex: 1;
+            height: 1px;
+            background-color: #a8a8b3;
+        }
+
+        &::after{
+            content: '';
+            flex: 1;
+            height: 1px;
+            background-color: #a8a8b3;
         }
     }
 }

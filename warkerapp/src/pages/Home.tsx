@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import { useContext } from "react";
 import { AuthContext } from "../App";
 import illustrationImg from "../assets/images/illustration.svg";
@@ -20,7 +21,7 @@ export function Home() {
           <header>
               <div className="header">
                 <h2>Explorar</h2>
-                <h3 onClick={(e)=>{console.log("estou sendo clicado")}}>Filtrar</h3>
+                <h3><Link to="/home/filter">Filtrar</Link></h3>
               </div>
           </header>
           <div className="search-map">

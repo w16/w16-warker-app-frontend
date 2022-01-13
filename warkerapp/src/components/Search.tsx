@@ -30,7 +30,7 @@ const SearchIconWrapper = styled("div")(({ theme }) => ({
 }));
 
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
-  color: "inherit",
+  color: "rgba(0, 0, 0, 0.74)",
   "& .MuiInputBase-input": {
     padding: theme.spacing(1, 1, 1, 0),
     // vertical padding + font size from searchIcon
@@ -38,9 +38,9 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     transition: theme.transitions.create("width"),
     width: "100%",
     [theme.breakpoints.up("sm")]: {
-      width: "10ch",
+      width: "30ch",
       "&:focus": {
-        width: "20ch"
+        color: "black"
       }
     }
   }
@@ -54,7 +54,7 @@ export default function SearchAppBar() {
           <SearchIcon />
         </SearchIconWrapper>
         <StyledInputBase
-          placeholder="Search…"
+          placeholder="Encontre um posto e salve-se"
           inputProps={{ "aria-label": "search" }}
         />
       </Search>

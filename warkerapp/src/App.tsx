@@ -1,3 +1,4 @@
+import { Filter } from "../src/pages/Filter";
 import firebase from "firebase/compat/app";
 import { createContext, useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
@@ -46,6 +47,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Login />}></Route>
             <Route path="/home" element={<Home />}></Route>
+            <Route path="/home/filter" element={<Filter />}></Route>
           </Routes>
         </AuthContext.Provider>
       </div>
