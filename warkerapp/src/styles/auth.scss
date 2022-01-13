@@ -142,6 +142,7 @@
         h3{
             color: rgba(0, 0, 0, 0.74);
             font-size: 24px;
+            margin-right: -15px;
             cursor: pointer;
         }
     }
@@ -182,6 +183,14 @@
     }
 }
 
+.search-map-filter{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 40px ;
+
+}
+
 .combustivel, .reservatorio, .localizacao{
     
    display: flex;
@@ -193,9 +202,11 @@
         margin-bottom: 15px;
     }
 
+    li:last-child{
+        margin-bottom: 0px;
+    }
+
     label {
         margin-left: 8px;
     }
-
-
 }

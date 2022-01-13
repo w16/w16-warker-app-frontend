@@ -36,7 +36,7 @@ export function Filter() {
               </h3>
             </div>
           </header>
-          <div className="search-map">
+          <div className="search-map-filter">
               <div className="posto">
             <h4>Pesquise por posto</h4>
             </div>
