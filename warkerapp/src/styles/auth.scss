@@ -145,6 +145,13 @@
             margin-right: -15px;
             cursor: pointer;
         }
+
+        .filterh3 {
+            color: rgba(0, 0, 0, 0.74);
+            font-size: 24px;
+            margin-right: 9px;
+            cursor: pointer;
+        }
     }
     
     .search-map {
@@ -214,7 +221,7 @@
 .range {
     display: flex;
     justify-content: space-between;
-    font-size: 15px;
+    font-size: 12px;
     color: #65696B;
 
 }

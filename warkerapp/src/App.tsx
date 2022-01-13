@@ -1,6 +1,6 @@
 import { Filter } from "../src/pages/Filter";
 import firebase from "firebase/compat/app";
-import { createContext, useState } from "react";
+import { createContext, useState, useEffect } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Home } from "./pages/Home";
 import { Login } from "./pages/Login";
@@ -22,6 +22,23 @@ export const AuthContext = createContext({} as AuthContextType);
 
 function App() {
   const [user, setUser] = useState<UserFormat>();
+
+  //monitorando se ja existia algum login pre-feito pelo usuario
+  useEffect(()=>{
+    auth.onAuthStateChanged(user =>{
+      if(user){
+        const { displayName, photoURL, uid } = user;
+        if (!displayName || !photoURL) {
+          throw new Error("Missing information from Google Account");
+        }
+        setUser({
+          id: uid,
+          name: displayName,
+          avatar: photoURL,
+        });
+      }
+    })
+  },[])
 
   async function SignInWithGoogle() {
     const provider = new firebase.auth.GoogleAuthProvider();
