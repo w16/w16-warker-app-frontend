@@ -55,9 +55,6 @@ export default function SearchAppBar() {
     setSearchStation(station)
   }
 
-
-
-
   return (
     <Toolbar>
       <Search>

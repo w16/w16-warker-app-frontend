@@ -3,6 +3,8 @@ import { useContext } from "react";
 import { AuthContext } from "../App";
 import illustrationImg from "../assets/images/illustration.svg";
 import SearchAppBar from "../components/Search";
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
+import { LatLngExpression } from "leaflet"
 import "../styles/auth.scss";
 
 export function Home() {
@@ -26,6 +28,18 @@ export function Home() {
           </header>
           <div className="search-map">
           <SearchAppBar></SearchAppBar>
+          <div>
+          <MapContainer id="map" center={{
+            lat: -27.647926875493706,
+            lng: -48.44147344104905,
+          } as LatLngExpression}
+          zoom={8}
+          whenCreated={()=>{}}
+          >
+            <TileLayer url={"https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"}></TileLayer>
+            <Marker position={[-27.647926875493706,-48.44147344104905] as LatLngExpression }></Marker>
+          </MapContainer>
+          </div>
           </div>
         </div>
       </main>
