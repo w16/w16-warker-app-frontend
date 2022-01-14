@@ -47,6 +47,17 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 export default function SearchAppBar() {
+
+  const [searchStation, setSearchStation] = React.useState()
+
+  function handleChange(event: { target: { value: any; }; }) {
+    let station = event.target.value
+    setSearchStation(station)
+  }
+
+
+
+
   return (
     <Toolbar>
       <Search>
@@ -56,6 +67,7 @@ export default function SearchAppBar() {
         <StyledInputBase
           placeholder="Encontre um posto e salve-se"
           inputProps={{ "aria-label": "search" }}
+          onChange={handleChange}
         />
       </Search>
     </Toolbar>

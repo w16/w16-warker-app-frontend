@@ -24,7 +24,7 @@ export function Filter() {
         <img src={illustrationImg}></img>
         <strong>Fuel Check</strong>
         <p>Search for the gas station closest to you in real time</p>
-        <p>Welcome, {user?.name}</p>
+        <p>Welcome, { user?.name }</p>
       </aside>
       <main>
         <div className="main-content-login">
