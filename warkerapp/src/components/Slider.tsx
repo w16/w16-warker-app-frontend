@@ -5,7 +5,7 @@ import Slider from '@mui/material/Slider';
 
 export default function SliderSizes() {
   return (
-    <Box width={435}>
+    <Box width={385}>
       <Slider
         size="small"
         defaultValue={10}
