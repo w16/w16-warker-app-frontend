@@ -28,7 +28,6 @@ export function Home() {
           </header>
           <div className="search-map">
           <SearchAppBar></SearchAppBar>
-          <div>
           <MapContainer id="map" center={{
             lat: -27.647926875493706,
             lng: -48.44147344104905,
@@ -36,10 +35,12 @@ export function Home() {
           zoom={8}
           whenCreated={()=>{}}
           >
-            <TileLayer url={"https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"}></TileLayer>
+            <TileLayer
+             attribution="&amp;copy <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
+             url={"https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"}></TileLayer>
             <Marker position={[-27.647926875493706,-48.44147344104905] as LatLngExpression }></Marker>
           </MapContainer>
-          </div>
+          
           </div>
         </div>
       </main>
