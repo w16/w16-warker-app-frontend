@@ -40,7 +40,9 @@ export function Filter() {
               <div className="posto">
             <h4>Pesquise por posto</h4>
             </div>
+            <div className="search-bar-filter">
             <SearchAppBar></SearchAppBar>
+            </div>
           </div>
           <div className="separator-filter"></div>
           <section>

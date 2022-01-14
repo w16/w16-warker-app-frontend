@@ -5,10 +5,17 @@ import illustrationImg from "../assets/images/illustration.svg";
 import SearchAppBar from "../components/Search";
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import { LatLngExpression } from "leaflet"
+import useGetLocation from "../hooks/useGetLocation"
 import "../styles/auth.scss";
+import { Button } from "../components/Button";
 
 export function Home() {
   const { user, SignInWithGoogle } = useContext(AuthContext);
+  const {coords} = useGetLocation()
+
+  if(!coords){
+    return <span>loading...</span>
+  }
 
   return (
     <div id="page-auth">
@@ -29,8 +36,8 @@ export function Home() {
           <div className="search-map">
           <SearchAppBar></SearchAppBar>
           <MapContainer id="map" center={{
-            lat: -27.647926875493706,
-            lng: -48.44147344104905,
+            lat: coords[0],
+            lng: coords[1],
           } as LatLngExpression}
           zoom={8}
           whenCreated={()=>{}}
@@ -38,9 +45,9 @@ export function Home() {
             <TileLayer
              attribution="&amp;copy <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
              url={"https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"}></TileLayer>
-            <Marker position={[-27.647926875493706,-48.44147344104905] as LatLngExpression }></Marker>
+            <Marker position={[coords[0],coords[1]] as LatLngExpression }></Marker>
           </MapContainer>
-          
+          <Button>Estou com sede!</Button>      
           </div>
         </div>
       </main>

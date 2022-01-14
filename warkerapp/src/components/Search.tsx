@@ -3,6 +3,7 @@ import { styled, alpha } from '@mui/material/styles';
 import Toolbar from '@mui/material/Toolbar';
 import InputBase from '@mui/material/InputBase';
 import SearchIcon from '@mui/icons-material/Search';
+import zIndex from '@mui/material/styles/zIndex';
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -14,8 +15,8 @@ const Search = styled("div")(({ theme }) => ({
   marginLeft: 0,
   width: "100%",
   [theme.breakpoints.up("sm")]: {
-    marginLeft: theme.spacing(-3),
-    width: "435px"
+    marginLeft: theme.spacing(0),
+    width: "100%"
   }
 }));
 

@@ -6,7 +6,7 @@
 
     aside {
         flex: 7;
-        background: #fd7b5ac7;
+        background: #ca5501bd;
         color: #FFF;
         
         display: flex;
@@ -64,7 +64,7 @@
         height: 50px;
         border-radius: 8px;
         font-weight: 500px;
-        background: #ea4335;
+        background: #CA5501;
         color: #FFF;
 
         display: flex;
@@ -135,7 +135,7 @@
     .header {
         display: flex;
         flex-direction: row;
-        width: 420px;
+        width: 100%;
         align-items:center;
         justify-content: space-between;
 
@@ -143,20 +143,25 @@
             color: rgba(0, 0, 0, 0.74);
             font-size: 24px;
             margin-right: -15px;
+            width: 25%;
             cursor: pointer;
         }
 
         .filterh3 {
             color: rgba(0, 0, 0, 0.74);
             font-size: 24px;
-            margin-right: 9px;
+            margin-right: -25px;
             cursor: pointer;
         }
     }
     
     .search-map {
 
-        margin-top: 40px ;
+        margin-top: 30px ;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
         > input {
             padding: 08px;
@@ -194,8 +199,13 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-top: 40px ;
+    margin-top: 30px ;
 
+}
+
+.search-bar-filter {
+    width: 113%;
+    margin-left: -25px;
 }
 
 .combustivel, .reservatorio, .localizacao{
@@ -228,7 +238,7 @@
 
 #map 
 {   
-    width: 410px;    
+     width: 100%;    
      height: 500px;
     
     }
