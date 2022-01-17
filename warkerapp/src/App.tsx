@@ -1,10 +1,11 @@
 import { Filter } from "../src/pages/Filter";
 import firebase from "firebase/compat/app";
-import { createContext, useState, useEffect } from "react";
+import { createContext, useState, useEffect, SetStateAction } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Home } from "./pages/Home";
 import { Login } from "./pages/Login";
 import { auth } from "./services/firebase";
+import api from "./services/api"
 
 type UserFormat = {
   id: string;
@@ -59,6 +60,8 @@ function App() {
       });
     }
   }
+
+  api()
 
   return (
     <BrowserRouter>
