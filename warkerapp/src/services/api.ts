@@ -7,18 +7,17 @@ function api() {
 
     const instance = axios.create({
     baseURL: 'https://warker-api.herokuapp.com/api',
-    timeout: 1000,
     headers: {'Authorization': 'Bearer '+token}
   });
 
   instance.get('/cidade')
   .then(response => {
-      console.log(response.data);
+    let data = response.data.data
+      console.log(data);
       
       return response.data;
   })
 }
-
 export default api
 
 
