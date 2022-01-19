@@ -8,12 +8,28 @@ import { LatLngExpression } from "leaflet"
 import useGetLocation from "../hooks/useGetLocation"
 import "../styles/auth.scss";
 import { Button } from "../components/Button";
+import api from "../services/api";
+import axios, { Axios, AxiosInstance } from "axios";
 
 export function Home() {
   const { user, SignInWithGoogle } = useContext(AuthContext);
   const {coords} = useGetLocation()
+  const [gasStations, setGasStations] = useState()
+ 
 
-  const [nearGas, setNearGas] = useState<number[] | null>()
+  useEffect(()=>{
+    api.get("/posto").then((response: { data: { data: any; }; }) => {
+      if (response) {
+      let data = response.data.data;
+      console.log(data);
+      setGasStations(data)
+    
+      return response.data;
+    }
+    });
+  },[])
+  
+
 
   if(!coords){
     return <span>loading...</span>
@@ -24,6 +40,9 @@ export function Home() {
 function handleGasCheck() {
     console.log(coords);
 }
+
+
+
 
   return (
     <div id="page-auth">

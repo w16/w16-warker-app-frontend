@@ -5,7 +5,6 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Home } from "./pages/Home";
 import { Login } from "./pages/Login";
 import { auth } from "./services/firebase";
-import api from "./services/api"
 
 type UserFormat = {
   id: string;
@@ -25,9 +24,9 @@ function App() {
   const [user, setUser] = useState<UserFormat>();
 
   //monitorando se ja existia algum login pre-feito pelo usuario
-  useEffect(()=>{
-    const unsubscribe = auth.onAuthStateChanged(user =>{
-      if(user){
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      if (user) {
         const { displayName, photoURL, uid } = user;
         if (!displayName || !photoURL) {
           throw new Error("Missing information from Google Account");
@@ -38,11 +37,9 @@ function App() {
           avatar: photoURL,
         });
       }
-      return (
-        unsubscribe()
-      )
-    })
-  },[])
+      return unsubscribe();
+    });
+  }, []);
 
   async function SignInWithGoogle() {
     const provider = new firebase.auth.GoogleAuthProvider();
@@ -60,8 +57,6 @@ function App() {
       });
     }
   }
-
-  api()
 
   return (
     <BrowserRouter>
