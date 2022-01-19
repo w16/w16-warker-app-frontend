@@ -32,7 +32,7 @@ export function Filter() {
             <div className="header">
               <h2>Filter</h2>
               <h3>
-                <Link to="/home">Goback</Link>
+                <Link style={{textDecoration: "none", color: "rgba(0, 0, 0, 0.74)" }} to="/home">Goback</Link>
               </h3>
             </div>
           </header>

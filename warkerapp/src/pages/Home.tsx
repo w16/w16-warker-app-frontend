@@ -10,7 +10,6 @@ import "../styles/auth.scss";
 import { Button } from "../components/Button";
 import api from "../services/api";
 import { iconPumpWithGas, iconPumpMediumGas, iconPumpLowGas } from "../services/iconProvider"
-import { PostAddOutlined } from "@mui/icons-material";
 
 export function Home() {
   const { user, SignInWithGoogle } = useContext(AuthContext);
@@ -65,7 +64,7 @@ function handleGasCheck() {
           <header>
               <div className="header">
                 <h2>Explorar</h2>
-                <h3 className="filterh3"><Link to="/home/filter">Filtrar</Link></h3>
+                <h3 className="filterh3"><Link style={{textDecoration: "none", color: "rgba(0, 0, 0, 0.74)" }} to="/home/filter">Filtrar</Link></h3>
               </div>
           </header>
           <div className="search-map">
