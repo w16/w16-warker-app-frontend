@@ -9,12 +9,13 @@ import useGetLocation from "../hooks/useGetLocation"
 import "../styles/auth.scss";
 import { Button } from "../components/Button";
 import api from "../services/api";
-import axios, { Axios, AxiosInstance } from "axios";
+import { iconPumpWithGas, iconPumpMediumGas, iconPumpLowGas } from "../services/iconProvider"
+import { PostAddOutlined } from "@mui/icons-material";
 
 export function Home() {
   const { user, SignInWithGoogle } = useContext(AuthContext);
   const {coords} = useGetLocation()
-  const [gasStations, setGasStations] = useState()
+  const [gasStations, setGasStations] = useState<any[]>([]);
  
 
   useEffect(()=>{
@@ -30,19 +31,26 @@ export function Home() {
   },[])
   
 
-
   if(!coords){
     return <span>loading...</span>
   }
 
-  //quando clicar no botao estou com sede me transportar pro posto mais proximo
+function checkQtdReservatory(qtdReservatory:number) {
+  
+  if(qtdReservatory > 80) {
+    return iconPumpWithGas
+  }else if (qtdReservatory < 80 && qtdReservatory > 40){
+    return iconPumpMediumGas
+  }else {
+    return iconPumpLowGas
+  }
+
+}
+
 
 function handleGasCheck() {
     console.log(coords);
 }
-
-
-
 
   return (
     <div id="page-auth">
@@ -67,12 +75,13 @@ function handleGasCheck() {
             lng: coords[1],
           } as LatLngExpression}
           zoom={8}
-          whenCreated={()=>{}}
           >
             <TileLayer
              attribution="&amp;copy <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
              url={"https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"}></TileLayer>
-            <Marker position={[coords[0],coords[1]] as LatLngExpression }></Marker>
+            {gasStations.map(posto => {
+              return <Marker icon={checkQtdReservatory(posto.reservatorio)} position={[posto.coords.longitude,posto.coords.latitude] as LatLngExpression }></Marker>
+            })}
           </MapContainer>
           <Button onClick={handleGasCheck}>Estou com sede!</Button>      
           </div>
