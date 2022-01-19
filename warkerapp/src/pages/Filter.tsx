@@ -7,6 +7,7 @@ import SliderSizes from "../components/Slider";
 import { Button } from "../components/Button";
 import "../styles/auth.scss";
 
+
 export function Filter() {
   const { user, SignInWithGoogle } = useContext(AuthContext);
 

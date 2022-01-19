@@ -79,7 +79,7 @@ function handleGasCheck() {
              attribution="&amp;copy <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
              url={"https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"}></TileLayer>
             {gasStations.map(posto => {
-              return <Marker icon={checkQtdReservatory(posto.reservatorio)} position={[posto.coords.longitude,posto.coords.latitude] as LatLngExpression }></Marker>
+              return <Marker key={posto.id} icon={checkQtdReservatory(posto.reservatorio)} position={[posto.coords.longitude,posto.coords.latitude] as LatLngExpression }></Marker>
             })}
           </MapContainer>
           <Button onClick={handleGasCheck}>Estou com sede!</Button>      
