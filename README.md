@@ -103,6 +103,6 @@ Credenciais de Acesso:
 ## Entrega
 Crie um FORK deste repositório e faça um Pull-Request. Commite no repositório todo o código do backend, juntamente com instruções, se necessário. O prazo para entrega será de 3 horas - ou melhor, 3 dias.
 
-Qualquer dúvida, crie um issue neste projeto ou entre em contato com o nosso time pelo instagram: @w16.softwarehouse
+Qualquer dúvida, crie um issue neste projeto ou entre em contato com o nosso time.
 
 2 DEVS ENTRAM, 1 DEV SAI!
